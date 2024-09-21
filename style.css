@@ -1,2 +1,42 @@
-.attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --primary-green: hsl(75,94%,57%);
+    --primary-white: hsl(0,0%,100%);
+
+    --secondary-grey-700: hsl(0,0%,20%);
+    --secondary-grey-800: hsl(0,0%,12%);
+    --secondary-grey-900: hsl(0,0%,8%);
+
+    --font-family-default: "Inter";
+    
+    --font-size-default: 0.875rem;
+}
+
+body {
+    background-color: var(--secondary-grey-900);
+    color: var(--primary-white);
+    display: grid;
+    font-family: var(--font-family-default);
+    font-size: var(--font-size-default);
+    height: 100vh;
+    justify-content: center;
+    place-content: center;
+}
+
+.profile {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.attribution { 
+    font-size: 11px; text-align: center; 
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
