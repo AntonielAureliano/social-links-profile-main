@@ -8,6 +8,7 @@
     --primary-green: hsl(75,94%,57%);
     --primary-white: hsl(0,0%,100%);
 
+    --secondary-grey-400: hsl(0,0%,80%);
     --secondary-grey-700: hsl(0,0%,20%);
     --secondary-grey-800: hsl(0,0%,12%);
     --secondary-grey-900: hsl(0,0%,8%);
@@ -15,6 +16,8 @@
     --font-family-default: "Inter";
     
     --font-size-default: 0.875rem;
+    --font-size-1: 1.625rem;
+    --font-size-2: 0.6875rem;
 }
 
 body {
@@ -24,19 +27,81 @@ body {
     font-family: var(--font-family-default);
     font-size: var(--font-size-default);
     height: 100vh;
-    justify-content: center;
     place-content: center;
+    text-align: center;
+}
+
+li {
+    list-style: none;
 }
 
 .profile {
+    background-color: var(--secondary-grey-800);
+    border-radius: 8px;
     display: flex;
     flex-direction: column;
+    gap: 30px;    
+    padding: 40px;
+}
+
+.profile-image {
+    display: flex;
+    justify-content: center;
+}
+
+.profile-image img {
+    border-radius: 50%;    
+    max-width: 90px;
+}
+
+.profile-description h2 {
+    font-size: var(--font-size-1);
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.profile-description h4 {
+    color: var(--primary-green);
+    font-size: var(--font-size-default);
+}
+
+.profile-position {
+    color: var(--secondary-grey-400);
+    padding: 0 20px 0 20px;
+}
+
+.profile-network {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.profile-network li {
+    background-color: var(--secondary-grey-700);
+    border-radius: 8px;
+    font-weight: 700;
+    padding: 15px 0px;
+    transition: .2s;
+}
+
+.profile-network li:hover {
+    background-color: var(--primary-green);
+    color: var(--secondary-grey-900);
+    cursor: pointer;
 }
 
 
 .attribution { 
-    font-size: 11px; text-align: center; 
+    font-size: var(--font-size-2);
+    margin-top: 15px;
+    text-align: center; 
 }
 .attribution a { 
     color: hsl(228, 45%, 44%); 
+}
+
+@media screen and (max-width: 375px) {
+    .profile {
+        padding: 25px;
+    }
 }
