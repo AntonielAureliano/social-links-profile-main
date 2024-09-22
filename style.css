@@ -54,7 +54,7 @@ li {
     max-width: 90px;
 }
 
-.profile-description h2 {
+.profile-description h1 {
     font-size: var(--font-size-1);
     font-weight: 600;
     margin-bottom: 15px;
